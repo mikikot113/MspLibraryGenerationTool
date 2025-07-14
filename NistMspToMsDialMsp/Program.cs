@@ -98,31 +98,31 @@ namespace NistMspToMsDialMsp
             ///  今回は元データがキレイだったのでjsonからそのまま作成する
             //MonaGcJsonToMsp.exportMspFile(workingFolder + "MoNA-export-Volatile_FiehnLib.json", OutFile + ".msp");　// exportMspFile(もとtsvファイル,出力mspファイル名)
 
-            //other 
-            //mspからSPLASHをとる
-            var inputMsp = @"d:\mikikot\Desktop\Tsugawa-san_work\2023\20231219_MSMS_VS19\check\BioMSMS-Pos-PlaSMA.msp";
-            var outputTsv = inputMsp+".splash.txt";
-            MspCheck.GetSpectrumSplashFromMsp(inputMsp,outputTsv);
+            ////other 
+            ////mspからSPLASHをとる
+            //var inputMsp = @"d:\mikikot\Desktop\Tsugawa-san_work\2023\20231219_MSMS_VS19\check\BioMSMS-Pos-PlaSMA.msp";
+            //var outputTsv = inputMsp+".splash.txt";
+            //MspCheck.GetSpectrumSplashFromMsp(inputMsp,outputTsv);
 
-            // File1にFile2のSPLASHが含まれているかチェック。
-            var file1 = @"D:\takahashi\desktop\Tsugawa-san_work\20200721_addLibrary\NIST20\nist14_chk\MSMS-Pos-NIST14.msp.txt";
-            var file2 = @"D:\takahashi\desktop\Tsugawa-san_work\20200721_addLibrary\NIST20\nist14_chk\NIST20_splash_all.splash";
-            var output = @"D:\takahashi\desktop\Tsugawa-san_work\20200721_addLibrary\NIST20\nist14_chk\NIST14-20-compair.txt";
-            //MspCheck.compairSplash(file1, file2, output);
+            //// File1にFile2のSPLASHが含まれているかチェック。
+            //var file1 = @"D:\takahashi\desktop\Tsugawa-san_work\20200721_addLibrary\NIST20\nist14_chk\MSMS-Pos-NIST14.msp.txt";
+            //var file2 = @"D:\takahashi\desktop\Tsugawa-san_work\20200721_addLibrary\NIST20\nist14_chk\NIST20_splash_all.splash";
+            //var output = @"D:\takahashi\desktop\Tsugawa-san_work\20200721_addLibrary\NIST20\nist14_chk\NIST14-20-compair.txt";
+            ////MspCheck.compairSplash(file1, file2, output);
 
-            //intensityを整数に
-            var path = @"D:\takahashi\desktop\Tsugawa-san_work\20200721_addLibrary\NIST20\generatedLibrary\"; 
-            var inputFile = path + @"\old\biopep_msms_nist_20200730.msp.txt";
-            var outputFile = path + "biopep_msms_nist_20200803.msp.txt";
-            //MspCheck.peakIntensityFroatToInt(inputFile, outputFile);
+            ////intensityを整数に
+            //var path = @"D:\takahashi\desktop\Tsugawa-san_work\20200721_addLibrary\NIST20\generatedLibrary\"; 
+            //var inputFile = path + @"\old\biopep_msms_nist_20200730.msp.txt";
+            //var outputFile = path + "biopep_msms_nist_20200803.msp.txt";
+            ////MspCheck.peakIntensityFroatToInt(inputFile, outputFile);
 
-            //mspのionmodeとadductの整合性チェック
-            var checkFolder = @"d:\mikikot\Desktop\Tsugawa-san_work\20231219_MSMS_VS19\check\";
-            var files = Directory.GetFiles(checkFolder);
-            foreach(var file in files)
-            {
-                MspCheck.IonModeChecker(file);
-            }
+            ////mspのionmodeとadductの整合性チェック
+            //var checkFolder = @"d:\mikikot\Desktop\Tsugawa-san_work\20231219_MSMS_VS19\check\";
+            //var files = Directory.GetFiles(checkFolder);
+            //foreach(var file in files)
+            //{
+            //    MspCheck.IonModeChecker(file);
+            //}
 
 
         }
